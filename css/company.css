@@ -9,8 +9,8 @@ body {
 }
 
 .header-inner {
-    margin: 0 40px;
     max-width: 1200px;
+    margin: 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
