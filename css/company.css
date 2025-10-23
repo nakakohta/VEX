@@ -1,13 +1,55 @@
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* ==================================== */
+/* 1. 全体の基本設定 */
+/* ==================================== */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
 
+/* メインコンテンツエリアのラッパー（mainタグに適用） */
+main.main-content-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
 
+/* ==================================== */
+/* 2. ヘッダーセクション */
+/* ==================================== */
+header {
+    background-color: #8b0000;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
 .header-inner {
-    margin: 0 40px;
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+/* ロゴ画像とサイズ調整 */
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
 }
 
 nav ul {
@@ -17,108 +59,154 @@ nav ul {
 }
 
 nav a {
-    color: black;
+    color: white;
+    text-decoration: none;
     font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.3s;
 }
 
-header {
-    background-color: #8b0000;
-    padding: 40px 0;
-}
-
-/* 見出しデザイン */
-.heading {
-    font-size: 25px;
-    text-align: center;
+nav a:hover {
     color: #ffd900;
-  
 }
 
 /* ==================================== */
-/* 1. 全体の基本設定 */
+/* 3. コンテンツセクション (理念、TOPメッセージ、企業沿革) */
 /* ==================================== */
-body {
-    /* 背景色を黒に設定 */
-    background-color: black;
-    /* 全体の文字色を白に設定し、黒背景でも可読性を確保 */
-    color: white; 
+
+/* セクションの共通スタイル */
+.section-block {
+    padding: 60px 40px;
+    margin-bottom: 0;
 }
 
+/* h1を囲む .heading クラスに中央寄せと下線スタイルを適用 */
+.heading {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.heading h1 {
+    font-size: 2.2em;
+    color: #ffd900;
+    padding: 20px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+}
+.heading h3 {
+    font-size: 2.2em;
+    color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 255);
+    display: inline-block;
+}
+
+/* ★★★ h3を囲む .midasi クラスを中央寄せに調整 ★★★ */
+.midasi {
+    display: block;
+    /* spanをブロック要素として扱い、幅いっぱいに広げる */
+    text-align: center;
+    /* 子要素（h3）を中央寄せ */
+    margin-top: 25px;
+    /* 上との間隔を確保 */
+    margin-bottom: 10px;
+    /* 下との間隔を確保 */
+}
+
+/* .midasi クラス内の h3 にスタイルを適用 */
+.midasi h3 {
+    font-size: 1.5em;
+    color: #ffd900;
+    padding-bottom: 10px;
+    /* 下線との間隔 */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    /* 下線 */
+    display: inline-block;
+    /* h3の幅をコンテンツ（テキスト）の幅に合わせる */
+    font-weight: bold;
+}
+
+/* ★★★ ここまで ★★★ */
+
+
+/* ★★★ pを囲む .naiyou クラス、または .section-block 直下の p を中央寄せに調整 ★★★ */
+.naiyou {
+    display: block;
+    /* spanをブロック要素として扱い、幅いっぱいに広げる */
+    /* ここではテキストの中央寄せのみ。もし.naiyou自体に幅を持たせて中央寄せしたい場合は
+       max-width と margin: auto; を追加してください。
+       例: max-width: 800px; margin: 0 auto; */
+    text-align: center;
+    /* 子要素（p）を中央寄せ */
+    margin-bottom: 15px;
+    /* 下のコンテンツとの間隔 */
+}
+
+/* .naiyou クラス内の p、または .section-block 直下の p にスタイルを適用 */
+.naiyou p,
+.section-block>p {
+    /* section-block直下のpタグにも適用 */
+    margin-left: auto;
+    margin-right: auto;
+    /* pタグ自体を中央寄せ */
+    max-width: 800px;
+    /* 読みやすさのため幅を制限 */
+    text-align: center;
+    color: #ccc;
+    line-height: 1.8;
+    /* 行間を少し広げて読みやすく */
+}
+
+/* ★★★ ここまで ★★★ */
+
+
 /* ==================================== */
-/* 2. フッターセクション（黒基調のデザイン適用） */
+/* 4. フッターセクション (SNSアイコン) */
 /* ==================================== */
 footer {
-    /* 背景色を黒に合う深みのある赤（バーガンディ）に設定 */
     background-color: #8B0000;
-    /* 上下に余白を追加 */
-    padding: 40px 0; 
-}
-
-/* 企業SNSの見出し (footer h2) */
-footer h2 {
-    /* 中央揃え */
+    padding: 40px 0;
     text-align: center;
-    /* 見出しとアイコンの間に余白を確保 */
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+footer h2 {
+    font-size: 1.8em;
     margin-bottom: 25px;
-    
-    /* 文字色を白に設定（濃い赤背景で映えるように） */
-    color: white;
-    
-    /* 区切り線を白に設定 */
-    border-bottom: 2px solid white; 
-    /* 線との間の余白 */
-    padding-bottom: 10px; 
-
-    /* ブロックの中央配置テクニック（見出し幅をコンテンツに合わせ中央寄せ） */
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
+    color: #ffd900;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+    display: inline-block;
+    min-width: 200px;
 }
 
-/* ==================================== */
-/* 3. SNSアイコン部分 (.sns-icons) */
-/* ==================================== */
 .sns-icons {
-    /* 容器の幅を固定 */
-    width: 280px;
-    /* ブロック要素の中央揃え */
-    margin-left: auto;
-    margin-right: auto;
-    
-    /* アイコンを横並びにする */
+    width: 320px;
+    margin: 0 auto 25px auto;
     display: flex;
-    /* アイコン間のスペースを均等に配置 */
     justify-content: space-between;
-    /* アイテムが折り返さないように */
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
 }
 
-/* ==================================== */
-/* 4. 個々のSNSアイコン (.sns-item) */
-/* ==================================== */
-
-/* 個々のリンクアイテム */
-.sns-item {
-    /* マウスオーバー時のアニメーションを滑らかにするための設定 */
-    transition: transform 0.3s ease-in-out;
-}
-
-/* アイコン画像自体のサイズ調整 */
 .sns-item img {
-    /* アイコンの統一サイズを設定 */
-    width: 45px;
-    height: 45px;
-    /* 画像の角を丸くする */
-    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* マウスが乗った時のエフェクト (ホバー) */
 .sns-item:hover {
-    /* 少し拡大 */
-    transform: scale(1.15); 
-    /* 黒背景で目立ちすぎないよう、影を薄い白に近い色で設定 */
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15); 
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+    filter: brightness(1.2);
 }
+
 
 
 .section-blockhistory-area{
@@ -128,3 +216,12 @@ footer h2 {
     height: auto;               /* 高さ指定 */
     margin: auto;
 }
+
+.footer-bottom {
+    background-color: #000;
+    color: #aaa;
+    padding: 10px 0;
+    font-size: 0.8em;
+    margin-top: 30px;
+}
+
