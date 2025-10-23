@@ -1,16 +1,10 @@
-header {
-    background-color: #8b0000;
-    padding: 40px 0;
-}
 
-body {
-    background-color: black;
-    color: white;
-}
+
+
 
 .header-inner {
-    max-width: 1200px;
     margin: 0 40px;
+    max-width: 1200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -26,6 +20,30 @@ nav a {
     color: black;
     font-weight: 500;
 }
+
+header {
+    background-color: #8b0000;
+    padding: 40px 0;
+}
+
+/* 見出しデザイン */
+.heading {
+    font-size: 25px;
+    text-align: center;
+    color: #ffd900;
+  
+}
+
+/* ==================================== */
+/* 1. 全体の基本設定 */
+/* ==================================== */
+body {
+    /* 背景色を黒に設定 */
+    background-color: black;
+    /* 全体の文字色を白に設定し、黒背景でも可読性を確保 */
+    color: white; 
+}
+
 /* ==================================== */
 /* 2. フッターセクション（黒基調のデザイン適用） */
 /* ==================================== */
@@ -102,3 +120,11 @@ footer h2 {
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15); 
 }
 
+
+.section-blockhistory-area{
+    padding: 20px;              /* 余白指定 */
+    background-color:  #ff000040;    /* 背景色指定 */
+    width: 980px;               /* 幅指定 */
+    height: auto;               /* 高さ指定 */
+    margin: auto;
+}
