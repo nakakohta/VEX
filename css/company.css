@@ -1,19 +1,55 @@
-header {
-    background-color: #8b0000;
-    padding: 40px 0;
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* ==================================== */
+/* 1. 全体の基本設定 */
+/* ==================================== */
 body {
     background-color: black;
     color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* メインコンテンツエリアのラッパー（mainタグに適用） */
+main.main-content-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ==================================== */
+/* 2. ヘッダーセクション */
+/* ==================================== */
+header {
+    background-color: #8b0000;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-inner {
     max-width: 1200px;
-    margin: 0 40px;
+    margin: 0 auto;
+    padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+/* ロゴ画像とサイズ調整 */
+.logo img {
+    width: 80px;
+    height: auto;
+    display: block;
 }
 
 nav ul {
@@ -23,6 +59,169 @@ nav ul {
 }
 
 nav a {
-    color: black;
+    color: white;
+    text-decoration: none;
     font-weight: 500;
+    font-size: 1.1em;
+    transition: color 0.3s;
 }
+
+nav a:hover {
+    color: #ffd900;
+}
+
+/* ==================================== */
+/* 3. コンテンツセクション (理念、TOPメッセージ、企業沿革) */
+/* ==================================== */
+
+/* セクションの共通スタイル */
+.section-block {
+    padding: 60px 40px;
+    margin-bottom: 0;
+}
+
+/* h1を囲む .heading クラスに中央寄せと下線スタイルを適用 */
+.heading {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.heading h1 {
+    font-size: 2.2em;
+    color: #ffd900;
+    padding: 20px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+}
+.heading h3 {
+    font-size: 2.2em;
+    color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 255);
+    display: inline-block;
+}
+
+/* ★★★ h3を囲む .midasi クラスを中央寄せに調整 ★★★ */
+.midasi {
+    display: block;
+    /* spanをブロック要素として扱い、幅いっぱいに広げる */
+    text-align: center;
+    /* 子要素（h3）を中央寄せ */
+    margin-top: 25px;
+    /* 上との間隔を確保 */
+    margin-bottom: 10px;
+    /* 下との間隔を確保 */
+}
+
+/* .midasi クラス内の h3 にスタイルを適用 */
+.midasi h3 {
+    font-size: 1.5em;
+    color: #ffd900;
+    padding-bottom: 10px;
+    /* 下線との間隔 */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    /* 下線 */
+    display: inline-block;
+    /* h3の幅をコンテンツ（テキスト）の幅に合わせる */
+    font-weight: bold;
+}
+
+/* ★★★ ここまで ★★★ */
+
+
+/* ★★★ pを囲む .naiyou クラス、または .section-block 直下の p を中央寄せに調整 ★★★ */
+.naiyou {
+    display: block;
+    /* spanをブロック要素として扱い、幅いっぱいに広げる */
+    /* ここではテキストの中央寄せのみ。もし.naiyou自体に幅を持たせて中央寄せしたい場合は
+       max-width と margin: auto; を追加してください。
+       例: max-width: 800px; margin: 0 auto; */
+    text-align: center;
+    /* 子要素（p）を中央寄せ */
+    margin-bottom: 15px;
+    /* 下のコンテンツとの間隔 */
+}
+
+/* .naiyou クラス内の p、または .section-block 直下の p にスタイルを適用 */
+.naiyou p,
+.section-block>p {
+    /* section-block直下のpタグにも適用 */
+    margin-left: auto;
+    margin-right: auto;
+    /* pタグ自体を中央寄せ */
+    max-width: 800px;
+    /* 読みやすさのため幅を制限 */
+    text-align: center;
+    color: #ccc;
+    line-height: 1.8;
+    /* 行間を少し広げて読みやすく */
+}
+
+/* ★★★ ここまで ★★★ */
+
+
+/* ==================================== */
+/* 4. フッターセクション (SNSアイコン) */
+/* ==================================== */
+footer {
+    background-color: #8B0000;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+footer h2 {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: #ffd900;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+    display: inline-block;
+    min-width: 200px;
+}
+
+.sns-icons {
+    width: 320px;
+    margin: 0 auto 25px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.sns-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.sns-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+    filter: brightness(1.2);
+}
+
+
+
+.section-blockhistory-area {
+    padding: 20px;              /* 余白指定 */
+    background-color:  #ff0000;    /* 背景色指定 */
+    width: 980px;               /* 幅指定 */
+    height: auto;               /* 高さ指定 */
+    margin: auto;
+}
+
+.footer-bottom {
+    background-color: #000;
+    color: #aaa;
+    padding: 10px 0;
+    font-size: 0.8em;
+    margin-top: 30px;
+}
+
