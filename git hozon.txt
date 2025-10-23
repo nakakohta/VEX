@@ -1,0 +1,5 @@
+保存
+git add .
+git commit -m "aaa"
+git push origin hiroya
+
