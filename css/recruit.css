@@ -26,3 +26,7 @@ nav a {
     color: black;
     font-weight: 500;
 }
+
+th, td {
+   border:1px solid #333;
+}
