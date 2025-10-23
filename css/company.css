@@ -209,9 +209,9 @@ footer h2 {
 
 
 
-.section-blockhistory-area{
+.section-blockhistory-area {
     padding: 20px;              /* 余白指定 */
-    background-color:  #ff000040;    /* 背景色指定 */
+    background-color:  #ff0000;    /* 背景色指定 */
     width: 980px;               /* 幅指定 */
     height: auto;               /* 高さ指定 */
     margin: auto;
