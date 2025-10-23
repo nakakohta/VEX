@@ -207,6 +207,16 @@ footer h2 {
     filter: brightness(1.2);
 }
 
+
+
+.section-blockhistory-area{
+    padding: 20px;              /* 余白指定 */
+    background-color:  #ff000040;    /* 背景色指定 */
+    width: 980px;               /* 幅指定 */
+    height: auto;               /* 高さ指定 */
+    margin: auto;
+}
+
 .footer-bottom {
     background-color: #000;
     color: #aaa;
@@ -214,3 +224,4 @@ footer h2 {
     font-size: 0.8em;
     margin-top: 30px;
 }
+
