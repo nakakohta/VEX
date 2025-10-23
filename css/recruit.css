@@ -27,6 +27,42 @@ nav a {
     font-weight: 500;
 }
 
+th {
+    background-color: #ada8a8;
+    color: #000000;
+    width: 300px;
+    height: 80;
+
+}
+
+td {
+    width: 800px;
+    height: 80;
+}
+
 th, td {
    border:1px solid #333;
+   font-size:20px;
+
+}
+
+.ceo-com {
+    color: #8b0000;
+    font-weight: bold;
+}
+
+.monny {
+    color: #e6b422;
+}
+
+/* 見出しデザイン */
+.heading {
+    font-size: 25px;
+    text-align: center;
+    color: #ffd900;
+  
+}
+
+table {
+    border-collapse: collapse;
 }
